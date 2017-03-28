@@ -1,0 +1,862 @@
+   License is going to expire in 47 days  on Saturday November 26th, 2016
+   This copy of MOLCAS is licensed to Emily Carter
+                                                                                                   
+                                              ^^^^^            M O L C A S                         
+                                             ^^^^^^^           version 7.8 patchlevel 047           
+                               ^^^^^         ^^^^^^^                                               
+                              ^^^^^^^        ^^^ ^^^                                               
+                              ^^^^^^^       ^^^^ ^^^                                               
+                              ^^^ ^^^       ^^^^ ^^^                                               
+                              ^^^ ^^^^      ^^^  ^^^                                               
+                              ^^^  ^^ ^^^^^  ^^  ^^^^                                              
+                             ^^^^      ^^^^   ^   ^^^                                              
+                             ^   ^^^   ^^^^   ^^^^  ^                                              
+                            ^   ^^^^    ^^    ^^^^   ^                                             
+                        ^^^^^   ^^^^^   ^^   ^^^^^   ^^^^^                                         
+                     ^^^^^^^^   ^^^^^        ^^^^^    ^^^^^^^                                      
+                 ^^^^^^^^^^^    ^^^^^^      ^^^^^^^   ^^^^^^^^^^^                                  
+               ^^^^^^^^^^^^^   ^^^^^^^^^^^^^^^^^^^^   ^^^^^^^^^^^^^                                
+               ^^^^^^^^^^^^^   ^^^^             ^^^   ^^^      ^^^^                                
+               ^^^^^^^^^^^^^                          ^^^      ^^^^                                
+               ^^^^^^^^^^^^^       ^^^^^^^^^^^^        ^^      ^^^^                                
+               ^^^^^^^^^^^^      ^^^^^^^^^^^^^^^^      ^^      ^^^^                                
+               ^^^^^^^^^^^^    ^^^^^^^^^^^^^^^^^^^^    ^^      ^^^^                                
+               ^^^^^^^^^^^^    ^^^^^^^^^^^^^^^^^^^^    ^^      ^^^^    ^^^^^     ^^^    ^^^^^^     
+               ^^^^^^^^^^^^   ^^^^^^^^^^^^^^^^^^^^^^   ^^      ^^^^   ^^^^^^^    ^^^   ^^^  ^^^    
+               ^^^^^^^^^^^    ^^^^^^^^^^^^^^^^^^^^^^   ^       ^^^^  ^^^    ^^   ^^^   ^^    ^^    
+               ^^^^^^^^^^^     ^^^^^^^^^^^^^^^^^^^^            ^^^^  ^^         ^^ ^^  ^^^^^       
+               ^^^^^^^^^^      ^^^^^^^^^^^^^^^^^^^^        ^   ^^^^  ^^         ^^ ^^   ^^^^^^     
+               ^^^^^^^^          ^^^^^^^^^^^^^^^^          ^   ^^^^  ^^        ^^^^^^^     ^^^^    
+               ^^^^^^      ^^^     ^^^^^^^^^^^^     ^      ^   ^^^^  ^^^   ^^^ ^^^^^^^ ^^    ^^    
+                         ^^^^^^                    ^^      ^   ^^^^   ^^^^^^^  ^^   ^^ ^^^  ^^^    
+                      ^^^^^^^^^^^^             ^^^^^^      ^           ^^^^^  ^^     ^^ ^^^^^^     
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                  
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                      
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                         
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^                                             
+                               ^^^^^^^^^^^^^^^^^^^^                                                
+                                   ^^^^^^^^^^^^                                                    
+                                       ^^^^^^                                                      
+
+                           Copyright, all rights, reserved:                                        
+                         Permission is hereby granted to use                                       
+                but not to reproduce or distribute any part of this                                
+             program. The use is restricted to research purposes only.                             
+                            Lund University Sweden, 2010.                                          
+                                                                                                   
+ For the author list and the recommended citation consult section 1.5 of the MOLCAS user's guide.  
+
+
+
+   -------------------------------------------------------------------
+  |                                                                   
+  |   Project         = test
+  |   Submitted from  = /scratch/gpfs/ckrauter/Test_embedding/prog_test/EmbeddingIntegralGenerator/examples/Molcas/Formaldehyde/interface_molcas
+  |   Scratch area    = /tmp/
+  |   Save outputs to = /tmp/
+  |   Molcas          = /home/ckrauter/progs/MOLCAS/molcas78_emb_new
+  |                                                                   
+  |   Scratch area is NOT empty
+  |                                                                   
+  |      MOLCAS_ISDEV = PRODUCTION          
+  |                                                                   
+   -------------------------------------------------------------------
+--- Start Module: auto at Mon Oct 10 16:17:07 2016 
+
+++ ---------   Input file   ---------
+
+  &SEWARD &END
+    Title
+    pd10 co
+    Basis set
+    C   / inline
+      6.   3
+      10    4
+      8236.0000000        
+      1235.0000000        
+      280.8000000        
+      79.2700000        
+      25.5900000        
+      8.9970000        
+      3.3190000        
+      0.9059000        
+      0.3643000        
+      0.1285000        
+      0.0005310             -0.0001130              0.0000000              0.0000000        
+      0.0041080             -0.0008780              0.0000000              0.0000000        
+      0.0210870             -0.0045400              0.0000000              0.0000000        
+      0.0818530             -0.0181330              0.0000000              0.0000000        
+      0.2348170             -0.0557600              0.0000000              0.0000000        
+      0.4344010             -0.1268950              0.0000000              0.0000000        
+      0.3461290             -0.1703520              0.0000000              0.0000000        
+      0.0393780              0.1403820              1.0000000              0.0000000        
+      -0.0089830              0.5986840              0.0000000              0.0000000        
+      0.0023850              0.3953890              0.0000000              1.0000000        
+      5    3
+      18.7100000        
+      4.1330000        
+      1.2000000        
+      0.3827000        
+      0.1209000        
+      0.0140310              0.0000000              0.0000000        
+      0.0868660              0.0000000              0.0000000        
+      0.2902160              0.0000000              0.0000000        
+      0.5010080              1.0000000              0.0000000        
+      0.3434060              0.0000000              1.0000000        
+      2    2
+      1.0970000        
+      0.3180000        
+      1.0000000              0.0000000        
+      0.0000000              1.0000000        
+      1    1
+      0.7610000        
+      1.0000000        
+    C       3.594222    6.218747    8.509041 \Angstrom
+    End of basis set
+    Basis set
+    O   / inline
+      8.   3
+      10    4
+      15330.0000000        
+      2299.0000000        
+      522.4000000        
+      147.3000000        
+      47.5500000        
+      16.7600000        
+      6.2070000        
+      1.7520000        
+      0.6882000        
+      0.2384000        
+      0.0005080             -0.0001150              0.0000000              0.0000000        
+      0.0039290             -0.0008950              0.0000000              0.0000000        
+      0.0202430             -0.0046360              0.0000000              0.0000000        
+      0.0791810             -0.0187240              0.0000000              0.0000000        
+      0.2306870             -0.0584630              0.0000000              0.0000000        
+      0.4331180             -0.1364630              0.0000000              0.0000000        
+      0.3502600             -0.1757400              0.0000000              0.0000000        
+      0.0427280              0.1609340              1.0000000              0.0000000        
+      -0.0081540              0.6034180              0.0000000              0.0000000        
+      0.0023810              0.3787650              0.0000000              1.0000000        
+      5    3
+      34.4600000        
+      7.7490000        
+      2.2800000        
+      0.7156000        
+      0.2140000        
+      0.0159280              0.0000000              0.0000000        
+      0.0997400              0.0000000              0.0000000        
+      0.3104920              0.0000000              0.0000000        
+      0.4910260              1.0000000              0.0000000        
+      0.3363370              0.0000000              1.0000000        
+      2    2
+      2.3140000        
+      0.6450000        
+      1.0000000              0.0000000        
+      0.0000000              1.0000000        
+      1    1
+      1.4280000        
+      1.0000000        
+    O       2.916401    6.422257    7.534980 \Angstrom           
+    End of basis set
+    Basis set
+    H   / inline
+      1.   2
+      5    3
+      33.8700000        
+      5.0950000        
+      1.1590000        
+      0.3258000        
+      0.1027000        
+      0.0060680              0.0000000              0.0000000        
+      0.0453080              0.0000000              0.0000000        
+      0.2028220              0.0000000              0.0000000        
+      0.5039030              1.0000000              0.0000000        
+      0.3834210              0.0000000              1.0000000        
+      2    2
+      1.4070000        
+      0.3880000        
+      1.0000000              0.0000000        
+      0.0000000              1.0000000        
+      1    1
+      1.0570000        
+      1.0000000        
+    H1       3.528797    5.268722    9.100681 \Angstrom           
+    H2       4.337350    6.964926    8.891556 \Angstrom
+    End of basis set
+    CHOINPUT
+    THRCholesky
+      1.d-11
+    ENDCHOINPUT
+  &SCF &END
+
+-- ----------------------------------
+
+--- Start Module: seward at Mon Oct 10 16:17:07 2016 
+ 
+ 
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+                                 MOLCAS executing module SEWARD with 60000 MB of memory
+                                              at 16:17:07 Mon Oct 10 2016
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+ 
+ 
+total 11724
+lrwxrwxrwx 1 ckrauter eac       20 Oct 10 16:17 AMFI_INP -> /tmp//purge.AMFI_INP
+lrwxrwxrwx 1 ckrauter eac       23 Oct 10 16:17 SEWARINP -> /tmp//test.Seward.Input
+-rw-r--r-- 1 ckrauter eac     4384 Oct 10 16:17 autoinput.seward.1
+-rwxr-xr-x 1 ckrauter eac      279 Oct 10 16:17 emb.in
+-rw-r--r-- 1 ckrauter eac 10656521 Oct 10 16:17 embpot.dat
+-rw-r--r-- 1 ckrauter eac      527 Oct 10 16:17 molcas.env
+-rw-r--r-- 1 ckrauter eac  1248978 Oct 10 16:17 oneint.dat
+-rw-r--r-- 1 ckrauter eac       23 Oct 10 16:17 returncode
+-rw-r--r-- 1 ckrauter eac     4384 Oct 10 16:17 stdin
+-rw-r--r-- 1 ckrauter eac    53824 Oct 10 16:17 test.RunFile
+-rw-r--r-- 1 ckrauter eac     4384 Oct 10 16:17 test.Seward.Input
+-rw-r--r-- 1 ckrauter eac      199 Oct 10 16:17 xmldump
+/tmp
+  embedding code starts.....
+                     0                     9
+  loading parameters from emb.in...
+ 
+embpot_flag:  1
+ embedding potential is provided  
+ 
+read_embint2:  0
+ evaluate integrals by molcas
+  
+ shifted vector is provded
+  rlatv=
+     0.270353E+02     0.000000E+00     0.000000E+00
+    -0.135177E+02     0.234133E+02     0.000000E+00
+     0.000000E+00     0.000000E+00     0.321418E+02
+  vol=    20345.2604406538     
+ 
+ cell_init finished...
+  successfully open embpot.dat
+  reading embpot.dat ...
+  grid: n1=                   100
+  grid: n2=                    80
+  grid: n3=                   120
+embini: embpot is loaded. min/max: -2.5000E+01  2.5000E+01
+ embini finish
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+               SEWARD will generate:
+                  Multipole Moment integrals up to order  2
+                  Kinetic Energy integrals
+                  Nuclear Attraction integrals (point charge)
+                  One-Electron Hamiltonian integrals
+                  Cholesky decomposed two-electron repulsion integrals
+                   - CD Threshold:   0.10E-10
+ 
+ Title:
+                                            pd10 co                                     
+ 
+ 
+                   Integrals are discarded if absolute value <: 0.10E-39
+                   Integral cutoff threshold is set to       <: 0.10E-39
+ 
+ 
+++      Symmetry information:
+        ---------------------
+ 
+ 
+ 
+ 
+                    Character Table for C1 
+ 
+                             E  
+                    a        1  x, y, xy, Rz, z, xz, Ry, yz, Rx, I
+--
+ 
+      Basis set label:C..... 
+ 
+      Valence basis set:
+      ==================
+      Associated Effective Charge  6.000000 au
+      Associated Actual Charge     6.000000 au
+      Nuclear Model: Point charge
+ 
+ 
+      Shell  nPrim  nBasis  Cartesian Spherical Contaminant
+         s      10       4        X                  
+         p       5       3        X                  
+         d       2       2                 X         
+         f       1       1                 X         
+      Basis set label:O..... 
+ 
+      Valence basis set:
+      ==================
+      Associated Effective Charge  8.000000 au
+      Associated Actual Charge     8.000000 au
+      Nuclear Model: Point charge
+ 
+ 
+      Shell  nPrim  nBasis  Cartesian Spherical Contaminant
+         s      10       4        X                  
+         p       5       3        X                  
+         d       2       2                 X         
+         f       1       1                 X         
+      Basis set label:H..... 
+ 
+      Valence basis set:
+      ==================
+      Associated Effective Charge  1.000000 au
+      Associated Actual Charge     1.000000 au
+      Nuclear Model: Point charge
+ 
+ 
+      Shell  nPrim  nBasis  Cartesian Spherical Contaminant
+         s       5       3        X                  
+         p       2       2        X                  
+         d       1       1                 X         
+ 
+ 
+++       Molecular structure info:
+         -------------------------
+ 
+ 
+                    ************************************************ 
+                    **** Cartesian Coordinates / Bohr, Angstrom **** 
+                    ************************************************ 
+ 
+     Center  Label                x              y              z                     x              y              z
+        1      C                6.792095      11.751729      16.079757              3.594222       6.218747       8.509041
+        2      O                5.511199      12.136307      14.239049              2.916401       6.422257       7.534980
+        3      H1               6.668460       9.956442      17.197795              3.528797       5.268722       9.100681
+        4      H2               8.196404      13.161803      16.802606              4.337350       6.964926       8.891556
+ 
+                    *************************************** 
+                    *    InterNuclear Distances / Bohr    * 
+                    *************************************** 
+ 
+               1 C             2 O             3 H1            4 H2    
+    1 C        0.000000
+    2 O        2.275259        0.000000
+    3 H1       2.118572        3.852953        0.000000
+    4 H2       2.117286        3.851466        3.572832        0.000000
+ 
+                    ******************************************* 
+                    *    InterNuclear Distances / Angstrom    * 
+                    ******************************************* 
+ 
+               1 C             2 O             3 H1            4 H2    
+    1 C        0.000000
+    2 O        1.204015        0.000000
+    3 H1       1.121100        2.038895        0.000000
+    4 H2       1.120420        2.038108        1.890661        0.000000
+ 
+                    ************************************** 
+                    *    Valence Bond Angles / Degree    * 
+                    ************************************** 
+                          Atom centers                 Phi
+                      2 O        1 C        3 H1       122.50
+                      2 O        1 C        4 H2       122.48
+                      3 H1       1 C        4 H2       115.02
+--
+ 
+ 
+            Nuclear Potential Energy             31.19576358 au
+ 
+ 
+      Basis set specifications :
+      Symmetry species         a  
+      Basis functions           88
+ 
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+      Cholesky vectors        1659
+ 
+ 
+ 
+  Memory allocation map at Finish
+  ---------------------
+ 
+  FldNam   VarTyp            ID            Length             iPos
+  - - - - - - - - - - - - - - - - - - - - - - - - -
+  XUNI      REAL              4             960000           22022597
+  YUNI      REAL              5             960000           22982609
+  ZUNI      REAL              6             960000           23942621
+  POTUNI    REAL              7             960000           24902633
+  - - - - - - - - - - - - - - - - - - - - - - - - -
+--- Stop Module:  seward at Mon Oct 10 16:17:17 2016 /rc=0 ---
+--- Module seward spent 10 seconds 
+*** 
+--- Start Module: scf at Mon Oct 10 16:17:17 2016 
+ 
+ 
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+                                   MOLCAS executing module SCF with 60000 MB of memory
+                                              at 16:17:17 Mon Oct 10 2016
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+ 
+ 
+++ Input section
+      Header of the integral files:
+                                      pd10 co                                 
+       Integrals generated by seward 4.2.0  , Mon Oct 10 16:17:08 2016        
+ 
+ 
+ 
+      Cartesian coordinates in Angstrom:
+      --------------------------------------------
+      No.  Label        X         Y         Z     
+      --------------------------------------------
+       1   C          3.59422   6.21875   8.50904
+       2   O          2.91640   6.42226   7.53498
+       3   H1         3.52880   5.26872   9.10068
+       4   H2         4.33735   6.96493   8.89156
+      --------------------------------------------
+      Nuclear repulsion energy =   31.195764
+ 
+ 
+--
+      Orbital specifications :
+      Symmetry species               1
+                                     a
+      Frozen orbitals                0
+      Occupied orbitals              8
+      Secondary orbitals            80
+      Deleted orbitals               0
+      Total number of orbitals      88
+      Number of basis functions     88
+ 
+      Molecular charge                           0.000
+ 
+      SCF Algorithm: LK-Cholesky
+      The actual AO density is used
+      Number of density matrices in core              400
+      Maximum number of NDDO SCF iterations           400
+      Maximum number of HF  SCF iterations            400
+      Threshold for SCF energy change            0.10E-08
+      Threshold for density matrix               0.10E-03
+      Threshold for Fock matrix                  0.15E-03
+      Threshold for linear dependence            0.10E-04
+      Threshold at which DIIS is turned on       0.15E+00
+      Threshold at which QNR/C2DIIS is turned on 0.15E+00
+      Threshold for Norm(delta) (QNR/C2DIIS)     0.20E-04
+      DIIS extrapolation of the SCF procedure
+      All orbitals punched on: SCFORB
+ 
+      Input vectors read from INPORB
+      Orbital file label: *Guess orbitals                         
+ 
+ 
+++ Convergence information
+                                   SCF        iterations: Energy and convergence statistics
+ 
+Iter     Tot. SCF       One-electron     Two-electron   Energy   Max Dij or  Max Fij    DNorm      TNorm     AccCon    Time
+           Energy          Energy          Energy       Change   Delta Norm     
+                                      in Sec.
+   1   -112.91834388   -215.24733153     71.13322407  0.00E+00   0.46E+00*  0.22E+01*   0.60E+01   0.89E+02   NoneDa    0.
+   2   -137.01525886   -247.47758515     79.26656271 -0.24E+02*  0.61E+00*  0.45E+00*   0.84E+03   0.92E+02   Damp      0.
+   3   -139.45875440   -248.74838019     78.09386221 -0.24E+01*  0.68E+00*  0.40E+00*   0.69E+03   0.93E+02   Damp      0.
+   4   -140.75982852   -247.51535328     75.55976118 -0.13E+01*  0.12E+00*  0.72E-01*   0.84E+03   0.91E+02   Damp      0.
+   5   -140.82781788   -247.38998359     75.36640212 -0.68E-01*  0.53E-01*  0.72E-01*   0.81E+03   0.91E+02   QNRc2D    0.
+   6   -140.83465850   -247.58265524     75.55223316 -0.68E-02*  0.22E-01*  0.36E-02*   0.81E+03   0.92E+02   QNRc2D    0.
+   7   -140.83591950   -247.52578441     75.49410133 -0.13E-02*  0.35E-01*  0.36E-02*   0.80E+03   0.92E+02   QNRc2D    0.
+   8   -140.83660168   -247.52398741     75.49162215 -0.68E-03*  0.23E-01*  0.93E-02*   0.78E+03   0.92E+02   QNRc2D    0.
+   9   -140.83677822   -247.52352786     75.49098606 -0.18E-03*  0.16E-02*  0.78E-02*   0.77E+03   0.92E+02   QNRc2D    0.
+  10   -140.83678208   -247.53363615     75.50109049 -0.39E-05*  0.46E-03*  0.37E-03*   0.77E+03   0.92E+02   QNRc2D    0.
+  11   -140.83678230   -247.53355911     75.50101323 -0.22E-06*  0.91E-04*  0.12E-03    0.77E+03   0.92E+02   QNRc2D    0.
+  12   -140.83678231   -247.53327366     75.50072777 -0.14E-07*  0.13E-04   0.16E-04    0.77E+03   0.92E+02   QNRc2D    0.
+  13   -140.83678231   -247.53326554     75.50071965 -0.28E-09   0.14E-05   0.24E-05    0.77E+03   0.92E+02   QNRc2D    0.
+ 
+       Convergence after 13 Macro Iterations and  0 additional LS Iterations...
+ 
+ 
+--
+ *****************************************************************************************************************************
+ *                                                                                                                           *
+ *                                             SCF/KS-DFT Program, Final results                                             *
+ *                                                    Molcas version 7.8                                                     *
+ *                                                                                                                           *
+ *                                                                                                                           *
+ *                                                       Final Results                                                       *
+ *                                                                                                                           *
+ *****************************************************************************************************************************
+ 
+::    Total SCF energy                               -140.8367823100                                                    
+      One-electron energy                            -247.5332655426
+      Two-electron energy                              75.5007196521
+      Nuclear repulsion energy                         31.1957635804
+      Kinetic energy (interpolated)                   143.5249140626
+      Virial theorem                                    0.9812706263
+      Total spin, S(S+1)                                0.0000000000
+      Total spin, S                                     0.0000000000
+      Max non-diagonal density matrix element           0.0000000000
+      Max non-diagonal Fock matrix element              0.0000024061
+ 
+      All orbitals with orbital energies smaller than  E(LUMO)+0.5 are printed
+ 
+ 
+++       Molecular orbitals:
+         -------------------
+ 
+      Title: SCF orbitals                                                                    
+ 
+
+      Molecular orbitals for symmetry species 1: a  
+ 
+          Orbital        1         2         3         4         5         6         7         8         9
+          Energy      -19.2174  -14.3004   -3.7079   -2.9142   -2.4228   -2.1843   -1.8499   -1.6690   -1.2040
+          Occ. No.      2.0000    2.0000    2.0000    2.0000    2.0000    2.0000    2.0000    2.0000    0.0000
+ 
+        1 C     1s     -0.0036   -1.5321   -0.9829   -0.2052   -2.2361    0.2328   -1.2738   -2.3810   -1.2140
+        2 C     1s     -0.0042   -1.9280   -2.0957   -0.6140   -7.0151    0.6802   -3.7199   -7.4271   -3.6883
+        3 C     1s      0.0082    0.3292    1.1067    0.1771    1.6431   -0.2514    1.0261    2.0528    1.1042
+        4 C     1s     -0.0525   -0.8662   -1.3196   -0.3048   -2.3090    0.3194   -1.9179   -3.1270   -2.2740
+        5 C     2px    -0.0104   -0.4457   -1.2296   -0.0004    0.6821    0.0593    0.4335    0.7963    0.2636
+        6 C     2px    -0.0060    0.4748    0.8876   -0.0498   -0.8517   -0.1578   -0.8341   -0.5490   -0.4386
+        7 C     2px     0.0320    0.0806    0.3581   -0.0324   -0.5475    0.0471   -0.3978   -0.6060   -0.3225
+        8 C     2py     0.0036   -0.6305   -0.7101    0.0256    1.9977    0.4481    0.4007    0.2411   -1.3407
+        9 C     2py    -0.0135    0.9195    0.7580    0.1043   -0.8969   -0.1773   -0.6184   -0.4556    1.1063
+       10 C     2py     0.0375    0.3518    0.3624   -0.0833   -0.4322   -0.1999   -0.1149    0.0212    0.7695
+       11 C     2pz    -0.0153    0.4688   -2.3482   -0.0882   -0.4521   -0.0356    0.3786    0.3251    1.0927
+       12 C     2pz    -0.0020   -0.4826    1.1417   -0.0018   -0.3606   -0.3487   -0.2361   -0.6333   -0.7771
+       13 C     2pz     0.0195   -0.3045    0.6337    0.0091   -0.3361    0.0525   -0.3795   -0.5736   -0.7684
+       14 C     3d2-    0.0018   -0.0392    0.0462   -0.0243   -0.2298   -0.0518   -0.0890    0.1384    0.0707
+       15 C     3d2-    0.0241   -0.0873   -0.0590   -0.1261   -0.8710    0.0890   -0.7427   -0.4013   -0.7159
+       16 C     3d1-    0.0026    0.0447    0.0765   -0.0199    0.1197   -0.0140   -0.0711    0.0231    0.0390
+       17 C     3d1-    0.0536    0.3502    0.3018    0.0337    0.4834    0.0363    0.1459    0.5786    0.4089
+       18 C     3d0     0.0061   -0.0431    0.3459   -0.0177   -0.0265    0.0592   -0.0360   -0.0276   -0.1151
+       19 C     3d0    -0.0101    0.0136   -0.0767    0.0056    0.0606    0.1001   -0.0604    0.3511   -0.0304
+       20 C     3d1+    0.0064   -0.0888    0.2211   -0.0096   -0.2013    0.0395   -0.2016   -0.2092   -0.1487
+       21 C     3d1+    0.0143   -0.1185   -0.3159   -0.0629   -0.6995    0.2039   -0.5111   -0.7774   -0.4143
+       22 C     3d2+    0.0026    0.0042   -0.0759    0.0071    0.3310    0.0787    0.0634    0.0000   -0.1216
+       23 C     3d2+    0.0283    0.2447    0.2243    0.0563    0.3813   -0.0530    0.1440    0.4133    0.3913
+       24 C     4f3-   -0.0084   -0.0574   -0.0358    0.0010   -0.0549   -0.0021    0.0518   -0.3904   -0.0129
+       25 C     4f2-   -0.0192   -0.0158   -0.0230    0.0463   -0.2072   -0.0168   -0.1938   -0.1061   -0.1507
+       26 C     4f1-   -0.0173    0.0125    0.0109    0.0766    0.0233    0.0445   -0.0513    0.0741   -0.0412
+       27 C     4f0     0.0024    0.0447   -0.1099    0.0279    0.1832   -0.0266    0.0849    0.2332    0.0940
+       28 C     4f1+   -0.0041    0.0403   -0.1184    0.0540    0.1748   -0.0774    0.1887    0.0734    0.1461
+       29 C     4f2+   -0.0080    0.0961    0.0541    0.0293    0.1799   -0.0099    0.0163    0.1287    0.0958
+       30 C     4f3+   -0.0083   -0.0114    0.0413    0.0213    0.0054   -0.0470    0.1359    0.0797    0.1280
+       31 O     1s      0.9024   -0.0207   -0.0908   -0.2496   -0.0342   -0.0658   -0.0590    0.0279   -0.0702
+       32 O     1s     -0.1567   -0.0680   -0.1994   -1.1653   -0.1777    0.2500   -0.1036   -0.1903   -0.2398
+       33 O     1s      0.1269   -0.0127    0.0551    0.2249   -0.0293   -0.0391   -0.0102   -0.1577   -0.0076
+       34 O     1s      0.1300    0.8236    1.1874    0.7940    2.3611   -0.2973    1.8289    2.9846    1.7859
+       35 O     2px    -0.1149   -0.0589    0.0059    0.4555   -0.1160    0.0678   -0.0501   -0.2017   -0.0485
+       36 O     2px     0.0815    0.1509   -0.0345    0.0254    0.3399    0.0676    0.2865    0.4726    0.2236
+       37 O     2px     0.0448    0.2017    0.2464   -0.1124    0.6208   -0.1845    0.4798    0.7751    0.4749
+       38 O     2py    -0.4173    0.0183   -0.0204   -0.8500    0.1480   -0.4153   -0.0070    0.0897    0.0194
+       39 O     2py     0.3261   -0.0431    0.0615    0.0422   -0.0998   -0.0952   -0.1140   -0.1222   -0.1346
+       40 O     2py     0.1156   -0.0567   -0.0625    0.3441   -0.2828    0.2226   -0.1786   -0.1607   -0.2179
+       41 O     2pz     0.0809   -0.0987   -0.0184    0.5326   -0.2471    0.4656    0.0157   -0.8236   -0.1269
+       42 O     2pz    -0.0613    0.2346    0.0912   -0.1810    0.6088   -0.8347    0.2253    0.8573    0.2634
+       43 O     2pz    -0.0173    0.2996    0.3989   -0.1002    0.8718   -0.2375    0.6023    1.2585    0.6565
+       44 O     3d2-   -0.0067   -0.0014    0.0074    0.2614   -0.0034    0.0182    0.0095   -0.0217   -0.0012
+       45 O     3d2-    0.0200   -0.0173    0.0544    0.0681    0.0165   -0.1666   -0.0251   -0.0329   -0.0332
+       46 O     3d1-   -0.0139    0.0060    0.0192    0.0425    0.0204    0.0276    0.0197    0.0183    0.0084
+       47 O     3d1-    0.0349   -0.0629    0.0224   -0.1070   -0.1849    0.3277   -0.0858   -0.0059   -0.1227
+       48 O     3d0     0.0199   -0.0058   -0.0064    0.1693   -0.0016   -0.0395    0.0077   -0.1020   -0.0075
+       49 O     3d0    -0.0154    0.0847    0.1053   -0.0359    0.1007    0.1454    0.0892    0.3014    0.1073
+       50 O     3d1+    0.0107   -0.0127   -0.0207   -0.1335   -0.0114   -0.0371   -0.0157   -0.0291   -0.0104
+       51 O     3d1+    0.0002    0.1411   -0.0137    0.0161    0.3888   -0.3400    0.2276    0.4305    0.2163
+       52 O     3d2+   -0.0271    0.0003   -0.0156    0.0884    0.0064   -0.0419   -0.0122    0.0536    0.0029
+       53 O     3d2+    0.0204    0.0222   -0.0236   -0.0503    0.1055   -0.1268    0.0886    0.0492    0.0694
+       54 O     4f3-    0.0094   -0.0068    0.0226   -0.0581   -0.0073    0.0251    0.0016   -0.0030   -0.0032
+       55 O     4f2-    0.0091   -0.0227    0.0546   -0.1828   -0.0554    0.2028    0.0009   -0.0005   -0.0131
+       56 O     4f1-    0.0068   -0.0169    0.0080    0.0917   -0.0136   -0.0391   -0.0267    0.0059   -0.0300
+       57 O     4f0     0.0069    0.0032    0.0447   -0.0098   -0.0347    0.0978    0.0014   -0.0072    0.0017
+       58 O     4f1+   -0.0003    0.0363   -0.0129   -0.0327    0.0483    0.0168    0.0395    0.0862    0.0378
+       59 O     4f2+    0.0008    0.0165   -0.0172    0.0483    0.0299    0.0388    0.0421    0.0634    0.0408
+       60 O     4f3+    0.0058    0.0030    0.0022   -0.1874    0.0327   -0.1205   -0.0036    0.0038    0.0009
+       61 H1    1s      0.0109   -0.1009   -0.4603   -0.0536   -1.7203   -0.1911    1.3345   -0.3799   -2.0098
+       62 H1    1s      0.0455    1.3980    1.5093    0.3386    3.8101   -0.0202    0.7363    3.1728    2.9953
+       63 H1    1s      0.0176    0.4240    0.7134    0.0895    1.8960   -0.0821    0.2403    1.5436    1.8510
+       64 H1    2px    -0.0032   -0.0009   -0.0020    0.0123    0.0578    0.0281   -0.1822   -0.0258    0.0948
+       65 H1    2px     0.0046    0.0407    0.0988    0.0015    0.0540   -0.0336   -0.0228    0.2517    0.0505
+       66 H1    2py    -0.0004    0.0345   -0.0161    0.0156    0.0444    0.0105    0.0282    0.0516   -0.0535
+       67 H1    2py     0.0112    0.5861    0.6028    0.1524    1.4337   -0.0265    0.6401    1.3312    0.9957
+       68 H1    2pz    -0.0035   -0.0262   -0.0124    0.0017   -0.2130   -0.0506    0.2856   -0.0299   -0.2309
+       69 H1    2pz    -0.0025   -0.3533   -0.3576   -0.0830   -0.8227    0.0545   -0.2843   -0.8744   -0.6533
+       70 H1    3d2-   -0.0040    0.0030    0.0250    0.0129   -0.0140   -0.0205    0.0638    0.0973   -0.0508
+       71 H1    3d1-   -0.0002   -0.0716   -0.0847   -0.0134   -0.3108   -0.0118    0.0129   -0.2010   -0.1608
+       72 H1    3d0     0.0018   -0.0073    0.0097   -0.0158   -0.0747   -0.0342    0.1031    0.0236   -0.1201
+       73 H1    3d1+   -0.0026    0.0001    0.0151   -0.0030    0.0510    0.0160   -0.0816   -0.0290    0.1266
+       74 H1    3d2+    0.0008   -0.0588   -0.0628   -0.0254   -0.2274   -0.0188   -0.0003   -0.1273   -0.1284
+       75 H2    1s     -0.0024   -0.2967   -0.5228   -0.0574   -0.5088    0.0256   -0.1380   -0.5650   -0.0668
+       76 H2    1s     -0.0229    0.5315    0.8021    0.3134    3.2049   -0.2070    2.2628    3.2640    1.6167
+       77 H2    1s     -0.0136    0.4420    0.6534    0.1608    1.2128   -0.1319    0.8102    1.5382    0.7672
+       78 H2    2px     0.0005    0.0058    0.0303   -0.0047   -0.0537    0.0004   -0.0522   -0.0275   -0.0298
+       79 H2    2px    -0.0022   -0.1766   -0.2649   -0.0839   -1.0141    0.0680   -0.7357   -1.0868   -0.5006
+       80 H2    2py    -0.0044    0.0069    0.0363    0.0024   -0.0316   -0.0073   -0.0386   -0.0405   -0.0175
+       81 H2    2py     0.0061   -0.1836   -0.2586   -0.0766   -1.1073    0.0577   -0.7934   -1.1486   -0.5574
+       82 H2    2pz     0.0046   -0.0045    0.0010   -0.0187   -0.0316    0.0088   -0.0209   -0.0379   -0.0084
+       83 H2    2pz    -0.0087   -0.0863   -0.0801   -0.0695   -0.5137   -0.0034   -0.3969   -0.5786   -0.2942
+       84 H2    3d2-    0.0031    0.0770    0.0691    0.0023    0.1939   -0.0029    0.1458    0.1647    0.0899
+       85 H2    3d1-   -0.0027    0.0330    0.0188    0.0234    0.0684   -0.0020    0.0416    0.0948    0.0226
+       86 H2    3d0    -0.0007   -0.0311   -0.0012    0.0072   -0.0876   -0.0056   -0.0448   -0.0845   -0.0133
+       87 H2    3d1+    0.0004    0.0414    0.0571    0.0257    0.1007   -0.0076    0.0838    0.0928    0.0499
+       88 H2    3d2+   -0.0028   -0.0055   -0.0082    0.0030    0.0184   -0.0044    0.0102   -0.0304   -0.0139
+ 
+--
+ 
+ 
+++       Molecular Charges:
+         ------------------
+ 
+ 
+ 
+      Mulliken charges per center and basis function type
+      ---------------------------------------------------
+ 
+             C       O       H1      H2    
+      1s     0.9848  2.4880  1.7478  1.1522
+      2px    0.5024  0.6590  0.0994  0.3497
+      2pz    1.6442  0.6253  0.1947  0.1994
+      2py    1.5071  1.0371 -0.2309  0.4889
+      3d2+   0.1018  0.0612 -0.0570  0.0046
+      3d1+   0.3947  0.2762  0.0138  0.0094
+      3d0    0.3267  0.0426  0.0293 -0.0016
+      3d1-   0.0375  0.1572 -0.0924  0.0167
+      3d2-   0.3191  0.2524  0.0128  0.0293
+      4f3+   0.0330  0.0954  0.0000  0.0000
+      4f2+   0.0288  0.0081  0.0000  0.0000
+      4f1+   0.0869 -0.0074  0.0000  0.0000
+      4f0    0.0351  0.0131  0.0000  0.0000
+      4f1-   0.0159  0.0185  0.0000  0.0000
+      4f2-   0.0215  0.1264  0.0000  0.0000
+      4f3-   0.1370  0.0043  0.0000  0.0000
+      Total  6.1766  5.8573  1.7176  2.2485
+ 
+      N-E   -0.1766  2.1427 -0.7176 -1.2485
+ 
+      Total electronic charge=   16.000000
+ 
+      Total            charge=   -0.000000
+--
+ 
+ 
+++       Molecular Properties:
+         ---------------------
+ 
+ 
+      Charge (e):                                                                     
+                      =   -0.0000
+      Dipole Moment (Debye):                                                          
+      Origin of the operator (Ang)=    0.0000    0.0000    0.0000
+                     X=    3.0562               Y=    6.8940               Z=   -5.1355           Total=    9.1236
+      Quadrupole Moment (Debye*Ang):                                                  
+      Origin of the operator (Ang)=    3.2557    6.3204    8.0226
+                    XX=   -9.5107              XY=    3.8915              XZ=    4.3929              YY=  -19.5923
+                    YZ=    5.7676              ZZ=  -23.0462
+      In traceless form (Debye*Ang)
+                    XX=   11.8085              XY=    5.8372              XZ=    6.5894              YY=   -3.3139
+                    YZ=    8.6514              ZZ=   -8.4947
+--
+ 
+--- Stop Module:  scf at Mon Oct 10 16:17:21 2016 /rc=0 ---
+
+     Happy landing!
+
+--- Stop Module:  auto at Mon Oct 10 16:17:21 2016 /rc=0 ---
+--- Module auto spent 14 seconds 

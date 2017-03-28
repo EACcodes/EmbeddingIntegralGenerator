@@ -1,0 +1,46 @@
+
+********************************************************************************
+********************************************************************************
+**********                                                            **********
+                        EMBEDDING INTEGRAL GENERATOR                            
+**********                                                            **********
+********************************************************************************
+********************************************************************************
+
+********************************************************************************
+**********                                                            **********
+                        CONFIGURATION OF THIS CALCULATION                       
+
+Keyword                                 Value
+-------                                 -----
+BASIS FILE                              basis_set_TZ
+CARTESIAN                               0
+EMBEDDING INTS REAL                     0
+EMBEDDING POTENTIAL FILE                embpot.dat
+GRID DIMENSIONS                         100  80  120  
+LATTICE VECTORS                         10.1162  -10.1162  5e-15  
+                                        0  10.1162  -10.1162  
+                                        9.81998  9.81998  9.81998  
+NUM THREADS                             16
+OUTPUT FORMAT                           MOLCAS
+SHIFT VECTOR                            Not defined, use default:
+                                        0  0  0  
+XYZ FILE                                C.xyz
+**********                                                            **********
+********************************************************************************
+
+Running with OpenMP using 16 threads
+***********************
+*                      
+* Embedding Integrals  
+*                      
+***********************
+
+  Read grid data and embedding potential wall time(s): 1.596 cpu time(s): 0.38
+
+* Reciprocal space integration scheme
+  Calculate embedding integrals, real space part wall time(s): 3.019 cpu time(s): 24.17
+  Calculate embedding integrals, reciprocal space part wall time(s): 5.028 cpu time(s): 47.5
+
+  Calculate embedding integrals, sorting and printing wall time(s): 5.075 cpu time(s): 48.22
+TOTAL EXECUTION TIME  wall time(s): 7.635 cpu time(s): 48.6

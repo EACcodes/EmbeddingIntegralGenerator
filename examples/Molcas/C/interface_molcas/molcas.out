@@ -1,0 +1,483 @@
+   License is going to expire in 47 days  on Saturday November 26th, 2016
+   This copy of MOLCAS is licensed to Emily Carter
+                                                                                                   
+                                              ^^^^^            M O L C A S                         
+                                             ^^^^^^^           version 7.8 patchlevel 047           
+                               ^^^^^         ^^^^^^^                                               
+                              ^^^^^^^        ^^^ ^^^                                               
+                              ^^^^^^^       ^^^^ ^^^                                               
+                              ^^^ ^^^       ^^^^ ^^^                                               
+                              ^^^ ^^^^      ^^^  ^^^                                               
+                              ^^^  ^^ ^^^^^  ^^  ^^^^                                              
+                             ^^^^      ^^^^   ^   ^^^                                              
+                             ^   ^^^   ^^^^   ^^^^  ^                                              
+                            ^   ^^^^    ^^    ^^^^   ^                                             
+                        ^^^^^   ^^^^^   ^^   ^^^^^   ^^^^^                                         
+                     ^^^^^^^^   ^^^^^        ^^^^^    ^^^^^^^                                      
+                 ^^^^^^^^^^^    ^^^^^^      ^^^^^^^   ^^^^^^^^^^^                                  
+               ^^^^^^^^^^^^^   ^^^^^^^^^^^^^^^^^^^^   ^^^^^^^^^^^^^                                
+               ^^^^^^^^^^^^^   ^^^^             ^^^   ^^^      ^^^^                                
+               ^^^^^^^^^^^^^                          ^^^      ^^^^                                
+               ^^^^^^^^^^^^^       ^^^^^^^^^^^^        ^^      ^^^^                                
+               ^^^^^^^^^^^^      ^^^^^^^^^^^^^^^^      ^^      ^^^^                                
+               ^^^^^^^^^^^^    ^^^^^^^^^^^^^^^^^^^^    ^^      ^^^^                                
+               ^^^^^^^^^^^^    ^^^^^^^^^^^^^^^^^^^^    ^^      ^^^^    ^^^^^     ^^^    ^^^^^^     
+               ^^^^^^^^^^^^   ^^^^^^^^^^^^^^^^^^^^^^   ^^      ^^^^   ^^^^^^^    ^^^   ^^^  ^^^    
+               ^^^^^^^^^^^    ^^^^^^^^^^^^^^^^^^^^^^   ^       ^^^^  ^^^    ^^   ^^^   ^^    ^^    
+               ^^^^^^^^^^^     ^^^^^^^^^^^^^^^^^^^^            ^^^^  ^^         ^^ ^^  ^^^^^       
+               ^^^^^^^^^^      ^^^^^^^^^^^^^^^^^^^^        ^   ^^^^  ^^         ^^ ^^   ^^^^^^     
+               ^^^^^^^^          ^^^^^^^^^^^^^^^^          ^   ^^^^  ^^        ^^^^^^^     ^^^^    
+               ^^^^^^      ^^^     ^^^^^^^^^^^^     ^      ^   ^^^^  ^^^   ^^^ ^^^^^^^ ^^    ^^    
+                         ^^^^^^                    ^^      ^   ^^^^   ^^^^^^^  ^^   ^^ ^^^  ^^^    
+                      ^^^^^^^^^^^^             ^^^^^^      ^           ^^^^^  ^^     ^^ ^^^^^^     
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                  
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                      
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                         
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^                                             
+                               ^^^^^^^^^^^^^^^^^^^^                                                
+                                   ^^^^^^^^^^^^                                                    
+                                       ^^^^^^                                                      
+
+                           Copyright, all rights, reserved:                                        
+                         Permission is hereby granted to use                                       
+                but not to reproduce or distribute any part of this                                
+             program. The use is restricted to research purposes only.                             
+                            Lund University Sweden, 2010.                                          
+                                                                                                   
+ For the author list and the recommended citation consult section 1.5 of the MOLCAS user's guide.  
+
+
+
+   -------------------------------------------------------------------
+  |                                                                   
+  |   Project         = test
+  |   Submitted from  = /scratch/gpfs/ckrauter/Test_embedding/prog_test/EmbeddingIntegralGenerator/examples/Molcas/C/interface_molcas
+  |   Scratch area    = /tmp/
+  |   Save outputs to = /tmp/
+  |   Molcas          = /home/ckrauter/progs/MOLCAS/molcas78_emb_new
+  |                                                                   
+  |   Scratch area is NOT empty
+  |                                                                   
+  |      MOLCAS_ISDEV = PRODUCTION          
+  |                                                                   
+   -------------------------------------------------------------------
+--- Start Module: auto at Mon Oct 10 16:17:52 2016 
+
+++ ---------   Input file   ---------
+
+  &SEWARD &END
+    Title
+    pd10 co
+    Basis set
+    C    / inline
+      6.   3
+      10    4
+      8236.0000000        
+      1235.0000000        
+      280.8000000        
+      79.2700000        
+      25.5900000        
+      8.9970000        
+      3.3190000        
+      0.9059000        
+      0.3643000        
+      0.1285000        
+      0.0005310             -0.0001130              0.0000000              0.0000000        
+      0.0041080             -0.0008780              0.0000000              0.0000000        
+      0.0210870             -0.0045400              0.0000000              0.0000000        
+      0.0818530             -0.0181330              0.0000000              0.0000000        
+      0.2348170             -0.0557600              0.0000000              0.0000000        
+      0.4344010             -0.1268950              0.0000000              0.0000000        
+      0.3461290             -0.1703520              0.0000000              0.0000000        
+      0.0393780              0.1403820              1.0000000              0.0000000        
+      -0.0089830              0.5986840              0.0000000              0.0000000        
+      0.0023850              0.3953890              0.0000000              1.0000000        
+      5    3
+      18.7100000        
+      4.1330000        
+      1.2000000        
+      0.3827000        
+      0.1209000        
+      0.0140310              0.0000000              0.0000000        
+      0.0868660              0.0000000              0.0000000        
+      0.2902160              0.0000000              0.0000000        
+      0.5010080              1.0000000              0.0000000        
+      0.3434060              0.0000000              1.0000000        
+      2    2
+      1.0970000        
+      0.3180000        
+      1.0000000              0.0000000        
+      0.0000000              1.0000000        
+      1    1
+      0.7610000        
+      1.0000000        
+    C   4.00 5.00 5.00 \Angstrom
+    End of basis set
+    CHOINPUT
+    THRCholesky
+      1.d-12
+    ENDCHOINPUT
+  &SCF &END
+    FERMI
+      0
+
+-- ----------------------------------
+
+--- Start Module: seward at Mon Oct 10 16:17:52 2016 
+ 
+ 
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+                                 MOLCAS executing module SEWARD with 60000 MB of memory
+                                              at 16:17:52 Mon Oct 10 2016
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+ 
+ 
+total 10684
+lrwxrwxrwx 1 ckrauter eac       20 Oct 10 16:17 AMFI_INP -> /tmp//purge.AMFI_INP
+lrwxrwxrwx 1 ckrauter eac       23 Oct 10 16:17 SEWARINP -> /tmp//test.Seward.Input
+-rw-r--r-- 1 ckrauter eac     1825 Oct 10 16:17 autoinput.seward.1
+-rwxr-xr-x 1 ckrauter eac      312 Oct 10 16:17 emb.in
+-rw-r--r-- 1 ckrauter eac 10656521 Oct 10 16:17 embpot.dat
+-rw-r--r-- 1 ckrauter eac      505 Oct 10 16:17 molcas.env
+-rw-r--r-- 1 ckrauter eac   195849 Oct 10 16:17 oneint.dat
+-rw-r--r-- 1 ckrauter eac       23 Oct 10 16:17 returncode
+-rw-r--r-- 1 ckrauter eac     1825 Oct 10 16:17 stdin
+-rw-r--r-- 1 ckrauter eac    53824 Oct 10 16:17 test.RunFile
+-rw-r--r-- 1 ckrauter eac     1825 Oct 10 16:17 test.Seward.Input
+-rw-r--r-- 1 ckrauter eac      199 Oct 10 16:17 xmldump
+/tmp
+  embedding code starts.....
+                     0                     9
+  loading parameters from emb.in...
+ 
+embpot_flag:  1
+ embedding potential is provided  
+ 
+read_embint2:  0
+ evaluate integrals by molcas
+  
+ shifted vector is provded
+  rlatv=
+     0.191168E+02    -0.191168E+02     0.944863E-14
+     0.000000E+00     0.191168E+02    -0.191168E+02
+     0.185571E+02     0.185571E+02     0.185571E+02
+  vol=    20345.2625239247     
+ 
+ cell_init finished...
+  successfully open embpot.dat
+  reading embpot.dat ...
+  grid: n1=                   100
+  grid: n2=                    80
+  grid: n3=                   120
+embini: embpot is loaded. min/max: -2.5000E+01  2.5000E+01
+ embini finish
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+               SEWARD will generate:
+                  Multipole Moment integrals up to order  2
+                  Kinetic Energy integrals
+                  Nuclear Attraction integrals (point charge)
+                  One-Electron Hamiltonian integrals
+                  Cholesky decomposed two-electron repulsion integrals
+                   - CD Threshold:   0.10E-11
+ 
+ Title:
+                                            pd10 co                                     
+ 
+ 
+                   Integrals are discarded if absolute value <: 0.10E-39
+                   Integral cutoff threshold is set to       <: 0.10E-39
+ 
+ 
+++      Symmetry information:
+        ---------------------
+ 
+ 
+ 
+ 
+                    Character Table for C1 
+ 
+                             E  
+                    a        1  x, y, xy, Rz, z, xz, Ry, yz, Rx, I
+--
+ 
+      Basis set label:C..... 
+ 
+      Valence basis set:
+      ==================
+      Associated Effective Charge  6.000000 au
+      Associated Actual Charge     6.000000 au
+      Nuclear Model: Point charge
+ 
+ 
+      Shell  nPrim  nBasis  Cartesian Spherical Contaminant
+         s      10       4        X                  
+         p       5       3        X                  
+         d       2       2                 X         
+         f       1       1                 X         
+ 
+ 
+++       Molecular structure info:
+         -------------------------
+ 
+ 
+                    ************************************************ 
+                    **** Cartesian Coordinates / Bohr, Angstrom **** 
+                    ************************************************ 
+ 
+     Center  Label                x              y              z                     x              y              z
+        1      C                7.558904       9.448631       9.448631              4.000000       5.000000       5.000000
+--
+ 
+ 
+            Nuclear Potential Energy              0.00000000 au
+ 
+ 
+      Basis set specifications :
+      Symmetry species         a  
+      Basis functions           30
+ 
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+ Reading oneint.dat
+      Cholesky vectors         328
+ 
+ 
+ 
+  Memory allocation map at Finish
+  ---------------------
+ 
+  FldNam   VarTyp            ID            Length             iPos
+  - - - - - - - - - - - - - - - - - - - - - - - - -
+  XUNI      REAL              4             960000           20750789
+  YUNI      REAL              5             960000           21710801
+  ZUNI      REAL              6             960000           22670813
+  POTUNI    REAL              7             960000           23630825
+  - - - - - - - - - - - - - - - - - - - - - - - - -
+--- Stop Module:  seward at Mon Oct 10 16:17:53 2016 /rc=0 ---
+*** 
+--- Start Module: scf at Mon Oct 10 16:17:53 2016 
+ 
+ 
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+                                   MOLCAS executing module SCF with 60000 MB of memory
+                                              at 16:17:53 Mon Oct 10 2016
+()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
+ 
+ 
+++ Input section
+      Header of the integral files:
+                                      pd10 co                                 
+       Integrals generated by seward 4.2.0  , Mon Oct 10 16:17:52 2016        
+ 
+ 
+ 
+      Cartesian coordinates in Angstrom:
+      --------------------------------------------
+      No.  Label        X         Y         Z     
+      --------------------------------------------
+       1   C          4.00000   5.00000   5.00000
+      --------------------------------------------
+      Nuclear repulsion energy =    0.000000
+ 
+ 
+--
+      Orbital specifications :
+      Symmetry species               1
+                                     a
+      Frozen orbitals                0
+      Aufbau                         3
+      Deleted orbitals               0
+      Total number of orbitals      30
+      Number of basis functions     30
+ 
+      Molecular charge                           0.000
+ 
+      SCF Algorithm: LK-Cholesky
+      The actual AO density is used
+      Number of density matrices in core              400
+      Maximum number of NDDO SCF iterations           400
+      Maximum number of HF  SCF iterations            400
+      Threshold for SCF energy change            0.10E-08
+      Threshold for density matrix               0.10E-03
+      Threshold for Fock matrix                  0.15E-03
+      Threshold for linear dependence            0.10E-04
+      Threshold at which DIIS is turned on       0.15E+00
+      Threshold at which QNR/C2DIIS is turned on 0.15E+00
+      Threshold for Norm(delta) (QNR/C2DIIS)     0.20E-04
+      DIIS extrapolation of the SCF procedure
+      All orbitals punched on: SCFORB
+ 
+      Detected guessorb starting orbitals                                             
+ 
+ 
+++ Convergence information
+                                   SCF        iterations: Energy and convergence statistics
+ 
+Iter     Tot. SCF       One-electron     Two-electron   Energy   Max Dij or  Max Fij    DNorm      TNorm     AccCon    Time
+           Energy          Energy          Energy       Change   Delta Norm     
+                                      in Sec.
+   1    -42.87858976    -56.04534104     13.16675128  0.00E+00   0.32E+00*  0.13E+01*   0.38E+01   0.21E+02   NoneDa    0.
+   2    -49.13754123    -64.49490260     15.35736137 -0.63E+01*  0.58E-01*  0.87E-01*   0.13E+02   0.23E+02   Damp      0.
+   3    -49.17431291    -64.45941490     15.28510199 -0.37E-01*  0.15E-01*  0.13E-01*   0.13E+02   0.23E+02   Damp      0.
+   4    -49.17552147    -64.46542161     15.28990014 -0.12E-02*  0.62E-02*  0.28E-02*   0.13E+02   0.23E+02   Damp      0.
+ 
+       Fermi aufbau procedure completed!
+      nOcc=    3
+ 
+   5    -49.17560669    -64.46619662     15.29058993 -0.85E-04*  0.24E-02*  0.11E-02*   0.14E+02   0.23E+02   Damp      0.
+   6    -49.17561530    -64.46656923     15.29095393 -0.86E-05*  0.97E-03*  0.44E-03*   0.14E+02   0.23E+02   Damp      0.
+   7    -49.17561638    -64.46674630     15.29112992 -0.11E-05*  0.38E-03*  0.18E-03*   0.14E+02   0.23E+02   Damp      0.
+   8    -49.17561654    -64.46682528     15.29120874 -0.15E-06*  0.15E-03*  0.70E-04    0.14E+02   0.23E+02   Damp      0.
+   9    -49.17561656    -64.46685913     15.29124257 -0.23E-07*  0.35E-04*  0.70E-04    0.14E+02   0.23E+02   QNRc2D    0.
+  10    -49.17561656    -64.46687336     15.29125680 -0.37E-08*  0.24E-04*  0.28E-09    0.14E+02   0.23E+02   QNRc2D    0.
+  11    -49.17561656    -64.46688335     15.29126678 -0.73E-09   0.90E-06   0.78E-05    0.14E+02   0.23E+02   QNRc2D    0.
+ 
+       Convergence after 11 Macro Iterations and  0 additional LS Iterations...
+ 
+ 
+--
+ *****************************************************************************************************************************
+ *                                                                                                                           *
+ *                                             SCF/KS-DFT Program, Final results                                             *
+ *                                                    Molcas version 7.8                                                     *
+ *                                                                                                                           *
+ *                                                                                                                           *
+ *                                                       Final Results                                                       *
+ *                                                                                                                           *
+ *****************************************************************************************************************************
+ 
+::    Total SCF energy                                -49.1756165631                                                    
+      One-electron energy                             -64.4668833455
+      Two-electron energy                              15.2912667824
+      Nuclear repulsion energy                          0.0000000000
+      Kinetic energy (interpolated)                    41.8882852630
+      Virial theorem                                    1.1739706282
+      Total spin, S(S+1)                                0.0000000000
+      Total spin, S                                     0.0000000000
+      Max non-diagonal density matrix element           0.0000000000
+      Max non-diagonal Fock matrix element              0.0000077979
+ 
+      All orbitals with orbital energies smaller than  E(LUMO)+0.5 are printed
+ 
+ 
+++       Molecular orbitals:
+         -------------------
+ 
+      Title: SCF orbitals                                                                    
+ 
+
+      Molecular orbitals for symmetry species 1: a  
+ 
+          Orbital        1         2         3         4         5
+          Energy      -13.6879   -1.7891   -1.4652   -0.5503   -0.1560
+          Occ. No.      2.0000    2.0000    2.0000    0.0000    0.0000
+ 
+        1 C     1s     -1.0055   -0.2437    0.0324   -0.0551   -0.0662
+        2 C     1s     -0.0048   -0.9466    1.0329   -0.3397    0.1484
+        3 C     1s      0.0397    0.1340    0.0088   -0.0314    0.1323
+        4 C     1s     -0.0016    0.4961   -0.3257    0.3731   -0.1787
+        5 C     2px    -0.4060    1.5617    0.8061    0.5841    0.3616
+        6 C     2px     0.2909   -0.5145   -0.1649   -0.1101   -0.3239
+        7 C     2px     0.1053   -0.5948   -0.2498   -0.1685   -0.1306
+        8 C     2py     0.2901    0.1049    0.2317    0.0352    0.1386
+        9 C     2py    -0.2136   -0.1464    0.0688   -0.1861   -0.5363
+       10 C     2py    -0.0722   -0.0059   -0.0793   -0.0209   -0.2436
+       11 C     2pz     0.3889   -0.5083   -0.0210    0.0584   -0.3017
+       12 C     2pz    -0.2817   -0.0771   -0.0448    0.7031    0.0549
+       13 C     2pz    -0.0999    0.2234    0.0383    0.0383    0.2721
+       14 C     3d2-   -0.0068   -0.0123   -0.0483    0.0172    0.0475
+       15 C     3d2-    0.0033    0.0199    0.0457    0.1269   -0.1698
+       16 C     3d1-    0.0000   -0.0748   -0.0094    0.1268   -0.0686
+       17 C     3d1-   -0.0001    0.0004   -0.0038    0.0300   -0.4717
+       18 C     3d0     0.0060    0.0432    0.0208   -0.0030   -0.0888
+       19 C     3d0    -0.0018   -0.0437    0.0615    0.1011    0.4612
+       20 C     3d1+    0.0054    0.1621   -0.1368    0.0848   -0.0531
+       21 C     3d1+   -0.0017   -0.0339   -0.0172    0.1912   -0.1145
+       22 C     3d2+   -0.0223   -0.1635    0.2258   -0.0623    0.1315
+       23 C     3d2+    0.0093    0.0362    0.0552   -0.0098    0.0425
+       24 C     4f3-    0.0013    0.0198    0.0131   -0.0548   -0.0397
+       25 C     4f2-    0.0031   -0.0249   -0.0227   -0.0254    0.0535
+       26 C     4f1-   -0.0005    0.0290    0.0984   -0.1674   -0.1391
+       27 C     4f0    -0.0029    0.0201   -0.0629    0.1134    0.1872
+       28 C     4f1+    0.0021    0.0136    0.0751   -0.1799   -0.0008
+       29 C     4f2+   -0.0006   -0.0945   -0.0616   -0.0042    0.1087
+       30 C     4f3+   -0.0059    0.1224    0.1037    0.0416    0.0203
+ 
+--
+ 
+ 
+++       Molecular Charges:
+         ------------------
+ 
+ 
+ 
+      Mulliken charges per center and basis function type
+      ---------------------------------------------------
+ 
+             C     
+      1s     3.4727
+      2px    1.5583
+      2pz    0.4123
+      2py    0.1388
+      3d2+   0.1789
+      3d1+   0.0862
+      3d0    0.0147
+      3d1-   0.0114
+      3d2-   0.0048
+      4f3+   0.0515
+      4f2+   0.0255
+      4f1+   0.0117
+      4f0    0.0087
+      4f1-   0.0211
+      4f2-   0.0023
+      4f3-   0.0011
+      Total  6.0000
+ 
+      N-E   -0.0000
+ 
+      Total electronic charge=    6.000000
+ 
+      Total            charge=   -0.000000
+--
+ 
+ 
+++       Molecular Properties:
+         ---------------------
+ 
+ 
+      Charge (e):                                                                     
+                      =   -0.0000
+      Dipole Moment (Debye):                                                          
+      Origin of the operator (Ang)=    0.0000    0.0000    0.0000
+                     X=   -0.6918               Y=   -1.3502               Z=   -1.0512           Total=    1.8456
+      Quadrupole Moment (Debye*Ang):                                                  
+      Origin of the operator (Ang)=    4.0000    5.0000    5.0000
+                    XX=   -4.9584              XY=   -0.2041              XZ=    1.2973              YY=   -1.9111
+                    YZ=   -0.0674              ZZ=   -3.7131
+      In traceless form (Debye*Ang)
+                    XX=   -2.1463              XY=   -0.3061              XZ=    1.9459              YY=    2.4247
+                    YZ=   -0.1011              ZZ=   -0.2783
+--
+ 
+--- Stop Module:  scf at Mon Oct 10 16:17:53 2016 /rc=0 ---
+
+     Happy landing!
+
+--- Stop Module:  auto at Mon Oct 10 16:17:53 2016 /rc=0 ---

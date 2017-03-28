@@ -1,0 +1,67 @@
+jobname: hh
+
+embstart:   1
+a1st:       1
+i1st:       1
+embfinal:   0
+
+# 1: complete embedding comp.
+# 2: just comp. integral
+# 3: read in integral and then move on
+embpot:     3
+
+##cstpot:     1.0
+
+ippc:       0
+isym:       0
+igrid:      0
+
+iion:       4
+ionpot:     4
+#
+# Unit cell dimensions
+
+grid_dim: 100 80 120
+
+#
+displ:  0.0   0.0  0.0
+# Real-space lattice vectors, in angstrom
+rlatv:
+      10.116199999999999     -10.116199999999999       0.000000000000005
+       0.000000000000000      10.116200000000001     -10.116199999999999
+       9.819982691896255       9.819982691896257       9.819982691896257
+
+# Number of region I and II ions
+nions:   1   0
+
+#
+# Ion specification: species index (set to zero to flag a ghost ion),
+# Cartesian coordinates (bohr), and Bragg-Slater radius (angstrom),
+ion_spec:
+0 0.047051097906619         -0.000000546027199         -0.031709081117013 0.7 1.9 C1
+
+# Region II non-local pseudopotential centers: species index,
+# Cartesian coordinates (bohr)
+nnlp:  0
+nlp_spec:
+# nothing
+
+#
+# Number of pseudopotentials
+npsp:       0
+# Pseudopotential specification: file name, amesh?, bmesh?
+psp_spec:
+# Number of radial points per center in the atomic grid?
+nradpt:     100
+#
+# Control flags for embedding potential: ikin1 ihar1 ivxc1
+ipot1:      2 1 1
+# Control flags for embedding potential: ikin12 ihar12 ivxc12
+ipot12:     2 1 1
+
+
+
+
+
+
+

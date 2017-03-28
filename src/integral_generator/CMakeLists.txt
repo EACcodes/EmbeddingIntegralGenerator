@@ -1,0 +1,10 @@
+set(INTEGRAL_GENERATOR_SOURCE
+integral_generator/BasisData.cpp
+integral_generator/ConvertKeys.cpp
+integral_generator/EmbeddingData.cpp
+integral_generator/InputReader.cpp
+integral_generator/Keyword.cpp
+integral_generator/main.cpp
+integral_generator/Timer.cpp
+PARENT_SCOPE)
+
