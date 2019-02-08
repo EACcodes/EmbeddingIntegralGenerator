@@ -42,6 +42,7 @@ public:
 
 	// Shell information
 	virtual void print_shell(size_t ind) = 0; // print shell with index idn
+	virtual void print_basis_gaussian94_format() = 0;
 	virtual std::vector<tiger::shell_t> get_shells() = 0; // Get Shells (coefficients, exponents, coords, etc.)
 	virtual arma::mat get_trans_mat() = 0; // Get transformation matrix between contracted and uncontracted basis functions
 	virtual bool is_spherical(size_t ind) = 0; // Are spherical harmonics in use?
@@ -85,6 +86,7 @@ public:
 	arma::vec eval_func(double x, double y, double z);
 	arma::vec eval_func(size_t shell_ind, double x, double y, double z);
 	void print_basis();
+	void print_basis_gaussian94_format();
 
 	// Shell information
 	void print_shell(size_t ind);
@@ -115,6 +117,8 @@ protected:
 	arma::mat trans_cart_sph_table(int l);
 	arma::mat trans_cart_sph_old(int l);
 	int nuc_chg(std::string token);
+	std::string chg_nuc(int chg);
+	std::string angmom_spd(int ang);
 };
 
 #endif /* TIGER_CPP_BASIS_H_ */

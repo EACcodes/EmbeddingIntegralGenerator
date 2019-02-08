@@ -118,6 +118,20 @@ void EmbeddingData::compute_integrals() {
     else if (_method == "MOLCAS") {
     	print_molcas(ints,"emb_ints.molcas");
     }
+    else if (_method == "QCHEM") {
+	//same as tigerci
+        // contract
+        arma::mat trans_contr = _basis->get_trans_mat();
+        ints = trans_contr.t() * ints * trans_contr ;
+        // transform to spherical
+        arma::mat trans_sph = _basis->get_trans_cart_sph();
+        ints = trans_sph * ints * trans_sph.t();
+
+        print_tigerci(ints,"emb_ints.qchem");
+	_basis->print_basis();
+	_basis->print_basis_gaussian94_format();
+
+    }
     else {
         cout << "This output format is not recognized and no output will be generated. ";
         cout << "This should have been detected when reading the input. Please let a developer know.";
