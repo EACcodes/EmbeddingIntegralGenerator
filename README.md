@@ -8,6 +8,7 @@ Currently available (To be continued):
 * TigerCI
 * GAMESS
 * MOLCAS
+* QChem
 
 Needs basis set specification, molecular structure, embedding potential, 
 and grid information. 

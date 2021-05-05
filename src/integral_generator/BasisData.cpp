@@ -229,6 +229,7 @@ void EmbeddingBasis::print_basis() {
 void EmbeddingBasis::print_shell(size_t ind) {
 	cout << endl << "Shell with index " << ind << " at position " << _shells[ind].center.x
 			<< " " << _shells[ind].center.y << " " << _shells[ind].center.z <<  endl;
+	cout << "ind_center = "<<_shells[ind].ind_center << endl;
 	cout << "   center   ang. mom.   ang. mom. comp.      exp.      coeff.   norm. coeff.   rel. norm coeff." << endl;
 
 	for (size_t i=0; i<_shells[ind].ang_mom_comp.size(); i++){
@@ -247,6 +248,65 @@ void EmbeddingBasis::print_shell(size_t ind) {
 			}
 		}
 	}
+}
+
+void EmbeddingBasis::print_basis_gaussian94_format()
+{
+
+	cout<<"**********************************"<<endl;
+	cout<<"* Basis set in Gaussian94 format *"<<endl;
+	cout<<"**********************************\n\n"<<endl;
+
+	vector<int> uniq_z, uniq_atom_ind; 
+	for (size_t i=0; i<_atoms.size(); i++){
+		int z = _atoms[i].Z;
+		if(find(uniq_z.begin(), uniq_z.end(), z) != uniq_z.end()) {
+                        continue;
+                }
+                else {
+                        uniq_z.push_back(z);
+			uniq_atom_ind.push_back(i);
+                }
+
+	}
+
+	int atom_ind_save = -1;
+	bool is_new_atom = false;
+	for (size_t i=0; i<_shells.size();i++){
+
+		is_new_atom = false;
+		int atom_ind = _shells[i].ind_center;
+		if(atom_ind != atom_ind_save){
+			atom_ind_save = atom_ind;
+			is_new_atom = true;
+		}
+		if(find(uniq_atom_ind.begin(), uniq_atom_ind.end(), atom_ind) != uniq_atom_ind.end()){
+			if(is_new_atom){
+				if(i>0) cout<<"****"<<endl;
+				cout<< chg_nuc(_atoms[atom_ind].Z);
+				cout<<"     0" <<endl;
+			}
+
+			cout<<angmom_spd(_shells[i].ang_mom)<<"   ";
+			int count = 0;
+			for (size_t j=0; j<_shells[i].exp.size(); j++){
+				if(fabs(_shells[i].coeff[j]) > 1e-11) count++;
+			}
+			cout<<count<<"   1.00"<<endl;
+
+			for (size_t j=0; j<_shells[i].exp.size(); j++){
+				if(fabs(_shells[i].coeff[j]) > 1e-11){
+					cout<<setprecision(8)<<_shells[i].exp[j] << "              ";
+					cout<<setprecision(10)<<_shells[i].coeff[j]<<endl;
+				}
+			}
+		}
+		else{
+			continue;
+		}
+	}
+	cout<<"****"<<endl;
+
 }
 
 std::vector<tiger::shell_t> EmbeddingBasis::get_shells() {
@@ -922,6 +982,101 @@ arma::mat EmbeddingBasis::trans_cart_sph_old(int l) {
 }
 
 
+std::string EmbeddingBasis::angmom_spd(int ang){
+
+	std::map<int,string> angmom_spd;
+
+	angmom_spd[0] = "S";
+	angmom_spd[1] = "P";
+	angmom_spd[2] = "D";
+	angmom_spd[3] = "F";
+	angmom_spd[4] = "G";
+	angmom_spd[5] = "H";
+	angmom_spd[6] = "I";
+
+	return angmom_spd[ang];
+}
+
+
+std::string EmbeddingBasis::chg_nuc(int chg){
+	std::map<int,string> chg_nuc;
+
+	chg_nuc[1] = "H";
+	chg_nuc[2] = "HE";
+	chg_nuc[3] = "LI";
+	chg_nuc[4] = "BE";
+	chg_nuc[5] = "B";
+	chg_nuc[6] = "C";
+	chg_nuc[7] = "N";
+	chg_nuc[8] = "O";
+	chg_nuc[9] = "F";
+	chg_nuc[10] = "NE";
+	chg_nuc[11] = "NA";
+	chg_nuc[12] = "MG";
+	chg_nuc[13] = "AL";
+	chg_nuc[14] = "SI";
+	chg_nuc[15] = "P";
+	chg_nuc[16] = "S";
+	chg_nuc[17] = "CL";
+	chg_nuc[18] = "AR";
+	chg_nuc[19] = "K";
+	chg_nuc[20] = "CA";
+	chg_nuc[21] = "SC";
+	chg_nuc[22] = "TI";
+	chg_nuc[23] = "V";
+	chg_nuc[24] = "CR";
+	chg_nuc[25] = "MN";
+	chg_nuc[26] = "FE";
+	chg_nuc[27] = "CO";
+	chg_nuc[28] = "NI";
+	chg_nuc[29] = "CU";
+	chg_nuc[30] = "ZN";
+	chg_nuc[31] = "GA";
+	chg_nuc[32] = "GE";
+	chg_nuc[33] = "AS";
+	chg_nuc[34] = "SE";
+	chg_nuc[35] = "BR";
+	chg_nuc[36] = "KR";
+	chg_nuc[37] = "RB";
+	chg_nuc[38] = "SR";
+	chg_nuc[39] = "Y";
+	chg_nuc[40] = "ZR";
+	chg_nuc[41] = "NB";
+	chg_nuc[42] = "MO";
+	chg_nuc[43] = "TC";
+	chg_nuc[44] = "RU";
+	chg_nuc[45] = "RH";
+	chg_nuc[46] = "PD";
+	chg_nuc[47] = "AG";
+	chg_nuc[48] = "CD";
+	chg_nuc[49] = "IN";
+	chg_nuc[50] = "SN";
+	chg_nuc[51] = "SB";
+	chg_nuc[52] = "TE";
+	chg_nuc[53] = "I";
+	chg_nuc[54] = "XE";
+	chg_nuc[55] = "CS";
+	chg_nuc[56] = "BA";
+	chg_nuc[72] = "HF";
+	chg_nuc[73] = "TA";
+	chg_nuc[74] = "W";
+	chg_nuc[75] = "RE";
+	chg_nuc[76] = "OS";
+	chg_nuc[77] = "IR";
+	chg_nuc[78] = "PT";
+	chg_nuc[79] = "AU";
+	chg_nuc[80] = "HG";
+	chg_nuc[81] = "TL";
+	chg_nuc[82] = "PB";
+	chg_nuc[83] = "BI";
+	chg_nuc[84] = "PO";
+	chg_nuc[85] = "AT";
+	chg_nuc[86] = "RN";
+	chg_nuc[87] = "FR";
+	chg_nuc[88] = "RA";
+
+	return chg_nuc[chg];
+}
 
 int EmbeddingBasis::nuc_chg(std::string token){
 
