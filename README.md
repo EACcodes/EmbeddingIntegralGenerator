@@ -72,7 +72,7 @@ example for the Molpro interface.
 
 * BASIS FILE 
     * file with basis set in Molcas format 
-    * all-electron nuclear charge has to be specified even when using ECPs (old format)
+    * all-electron nuclear charge has to be specified even when using an ECP (old format)
     * include the basis set only (remove the ECP block)
     * Required
 
@@ -82,7 +82,7 @@ example for the Molpro interface.
 
 * OUTPUT FORMAT
     * string specifying the desired output format for the embedding integrals
-    * available: MOLPRO, TIGERCI, GAMESS, MOLCAS
+    * available: MOLPRO, TIGERCI, GAMESS, MOLCAS, QCHEM
 
 * AO INTEGRAL THRESHOLD (not working yet)
     * Planned to be threshold for printing integrals
