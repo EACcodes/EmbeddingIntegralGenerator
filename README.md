@@ -71,7 +71,9 @@ example for the Molpro interface.
     * Required
 
 * BASIS FILE 
-    * file with basis set in Molcas format
+    * file with basis set in Molcas format 
+    * all-electron nuclear charge has to be specified even when using ECPs (old format)
+    * include the basis set only (remove the ECP block)
     * Required
 
 * EMBEDDING POTENTIAL FILE
