@@ -74,7 +74,7 @@ example for the Molpro interface.
     * file with basis set in Molcas format 
     * all-electron nuclear charge has to be specified even when using an ECP (old format)
     * include the basis set only (remove the ECP block)
-    * REMOVE lines: 
+    * REMOVE ALL instances of lines: 
       
       cartesian d
       
