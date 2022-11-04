@@ -77,6 +77,7 @@ example for the Molpro interface.
     * REMOVE lines: 
       
       cartesian d
+      
       End of basis set
     * Required
 
