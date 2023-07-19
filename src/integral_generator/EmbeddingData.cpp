@@ -32,7 +32,6 @@ EmbeddingData::EmbeddingData(ConvertKeys& global_vars, BasisData *bas) {
     cout << "*                      " << endl;
     cout << "***********************" << endl;
     cout << endl;
-    _basis->print_basis();
 
     // get information about cell from input file
     std::vector<std::vector<int>> vecs = _globals->get_global_int_vecs("grid dimensions");
