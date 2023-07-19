@@ -6,7 +6,6 @@
 
 #include "integral_generator/EmbeddingData.h"
 #include "integral_generator/Timer.h"
-#include "integral_generator/BasisData.h"
 
 #include <iomanip>
 #include <sstream>
