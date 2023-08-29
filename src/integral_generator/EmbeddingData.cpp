@@ -100,6 +100,16 @@ void EmbeddingData::compute_integrals() {
 
         print_molpro(sort_molpro(ints),"emb_ints.molpro");
     }
+    else if (_method == "PYSCF") {
+        // contract
+        arma::mat trans_contr = _basis->get_trans_mat();
+        ints = trans_contr.t() * ints * trans_contr ;
+        // transform to spherical
+        arma::mat trans_sph = _basis->get_trans_cart_sph();
+        ints = trans_sph * ints * trans_sph.t();
+
+        print_pyscf(ints,"emb_ints.pyscf");
+    }
     else if (_method == "GAMESS") {
     	// contract
     	arma::mat trans_contr = _basis->get_trans_mat();
@@ -668,6 +678,15 @@ void EmbeddingData::print_tigerci(arma::mat ints, std::string filename) {
     int_file.close();
 }
 
+void EmbeddingData::print_pyscf(arma::mat ints, std::string filename) {
+    ofstream int_file;
+    int_file.open(filename);
+    int_file.precision(12);
+    ints.raw_print(int_file);
+    int_file.close();
+}
+
+
 void EmbeddingData::print_molpro(arma::mat ints, std::string filename) {
     ofstream int_file;
     int_file.open(filename);
@@ -772,7 +791,7 @@ arma::mat EmbeddingData::sort_molpro(arma::mat ints) {
     for (std::vector<tiger::shell_t>::iterator it = shells.begin(); it!= shells.end(); it++) {
         int ang_mom = it->ang_mom;
         int offset = map.size();
-        
+
         switch (ang_mom) {
             case 0: {
                 for (size_t k = 0 ; k!=(ang_mom*2+1) ; k++)  map.push_back(_map_s[k] + offset);

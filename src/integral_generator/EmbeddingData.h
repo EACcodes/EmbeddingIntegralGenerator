@@ -87,6 +87,7 @@ private:
     void print_molpro(arma::mat ints, std::string filename);
     void print_gamess(arma::mat ints, std::string filename);
     void print_molcas(arma::mat ints, std::string filename);
+    void print_pyscf(arma::mat ints, std::string filename);
 
     // sort to Molpro order
     arma::mat sort_molpro(arma::mat ints);
