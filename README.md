@@ -9,6 +9,7 @@ Currently available (To be continued):
 * GAMESS
 * MOLCAS
 * QChem
+* PySCF
 
 Needs basis set specification, molecular structure, embedding potential, 
 and grid information. 
