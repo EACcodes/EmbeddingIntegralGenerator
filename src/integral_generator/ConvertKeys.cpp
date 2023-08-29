@@ -127,7 +127,7 @@ void ConvertKeys::check_input(){
 
   // check whether output format is available
   string method = global_strings.at("output format");
-  std::set<std::string> methods = {"TIGERCI","MOLPRO","GAMESS","MOLCAS","NWCHEM","QCHEM", "PYSCF"};
+  std::set<std::string> methods = {"TIGERCI","MOLPRO","GAMESS","MOLCAS","NWCHEM","QCHEM","PYSCF"};
   if ( methods.find(method) == methods.end() ) {
     throw runtime_error("ERROR: This option for OUTPUT FORMAT is not implemented!");    
   }
