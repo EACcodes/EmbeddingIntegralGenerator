@@ -88,7 +88,7 @@ example for the Molpro interface.
 
 * OUTPUT FORMAT
     * string specifying the desired output format for the embedding integrals
-    * available: MOLPRO, TIGERCI, GAMESS, MOLCAS, QCHEM
+    * available: MOLPRO, TIGERCI, GAMESS, MOLCAS, QCHEM, PYSCF
 
 * AO INTEGRAL THRESHOLD (not working yet)
     * Planned to be threshold for printing integrals
