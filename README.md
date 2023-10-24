@@ -1,7 +1,7 @@
 # EmbeddingIntegralGenerator
 
 Generator of embedding integrals in different formats to allow for reading
-with different quatum chemistry codes like TigerCI, Molpro, Molcas, etc.
+with different quantum chemistry codes like TigerCI, Molpro, Molcas, etc.
 
 Currently available (To be continued):
 * Molpro
